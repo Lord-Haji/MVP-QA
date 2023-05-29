@@ -5,7 +5,7 @@ import re
 from database import fetch_transcription, cache_transcription
 from qagpt_test import generate_report
 from classify import classify_call
-# from score_calculator import calculate_score
+from dataextractor import extract_data
 from config import API_KEY
 
 from scores import scores_dict
@@ -18,6 +18,7 @@ class AudioTranscription:
         self.transcript = ""
         self.call_category = ""
         self.report = []
+        self.data = ""
 
     @staticmethod
     def timer(func):
@@ -65,6 +66,13 @@ class AudioTranscription:
         # transcript_text = self.transcribe()
         self.call_category = classify_call(self.transcript)
         return self.call_category
+
+    def extract_data(self):
+        self.classify_call()
+        data = extract_data(self.transcript)
+        self.data = data
+
+        return self.data
 
     def qa_review(self):
         # self.transcribe()
