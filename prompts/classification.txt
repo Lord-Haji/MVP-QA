@@ -1,0 +1,21 @@
+Understand the call first. Based on the content and context of this conversation, which category and subcategory does it belong to? The options are:
+    Inbound:
+    - Cancel (customer initiated, expressing dissatisfaction and intent to cancel service and canceled service in the end)
+    - Transfer Sale (customer initiated, discussing transferring their service from an existing provider to us)
+    - Move-in Sale (customer initiated, discussing setting up service at a new location)
+    - Retention (customer initiated, existing first-energy customer, discussing potential cancellation but can be persuaded to stay and didn't cancel in the end)
+    - SMS Sale (customer initiated, discussing purchase or changes to service via SMS, customer was sucessfully served via a text message)
+    Outbound:
+    - Transfer (company initiated, discussing transferring customer's service from an existing provider to us)
+    - Move-in (company initiated, discussing setting up service at a new location for the customer)
+    - Retention (company initiated, outreach to customers at risk of cancelling service)
+    - SMS Sale (company initiated, promoting or selling services via SMS)
+    Channel Partner:
+    - Transfer (initiated by a partner agency, discussing transferring customer's service from an existing provider to us)
+    - Move-in (initiated by a partner agency, discussing setting up service at a new location for the customer)
+    Credit Calls:
+    - Credit Quality Assurance (discussing credit-related issues, focused on quality assurance)
+    - Victoria PDF (specific to Victoria region, discussing credit-related issues via PDF)
+    - Customer Support VIC PDF (specific to Victoria region, discussing general customer support issues via PDF)
+    Your Output should be in format [category]:[subcategory]
+    """
