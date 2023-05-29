@@ -14,8 +14,8 @@ Understand the call first. Based on the content and context of this conversation
     - Transfer (initiated by a partner agency, discussing transferring customer's service from an existing provider to us)
     - Move-in (initiated by a partner agency, discussing setting up service at a new location for the customer)
     Credit Calls:
-- Credit Quality Assurance (discussing credit-related issues, focused on quality assurance)
-- Victoria PDF (specific to Victoria region, discussing credit-related issues about payment difficulty)
-    - Customer Support VIC PDF (specific to Victoria region, discussing general customer support issues about payment difficulty)
+    - Credit Quality Assurance (discussing credit-related issues, focused on quality assurance)
+    - Victoria PDF (specific to Victoria region, discussing credit-related issues about payment difficulty, call is handeled by credit team: Hoang Le, Kate Williams, Rabia Sheikh, Pooja Dhir, Garima Dembla, Shruthi Selvakumar, Isaac Kim, Rose Simpson)
+    - Customer Support VIC PDF (specific to Victoria region, discussing credit-related issues about payment difficulty)
     Your Output should be in format [category]:[subcategory]
     """

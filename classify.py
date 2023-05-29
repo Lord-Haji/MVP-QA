@@ -23,13 +23,14 @@ def classify_call(transcript):
     - Move-in (company initiated, discussing setting up service at a new location for the customer)
     - Retention (company initiated, outreach to customers at risk of cancelling service)
     - SMS Sale (company initiated, promoting or selling services via SMS)
-    Channel Partner:
+    Channel Partnes:
     - Transfer (initiated by a partner agency, discussing transferring customer's service from an existing provider to us)
     - Move-in (initiated by a partner agency, discussing setting up service at a new location for the customer)
     Credit Calls:
     - Credit Quality Assurance (discussing credit-related issues, focused on quality assurance)
-    - Victoria PDF (specific to Victoria region, discussing credit-related issues via PDF)
-    - Customer Support VIC PDF (specific to Victoria region, discussing general customer support issues via PDF)
+    - Victoria PDF (specific to Victoria region, discussing credit-related issues about payment difficulty, call is handeled by credit team: Hoang Le, Kate Williams, Rabia Sheikh, Pooja Dhir, Garima Dembla, Shruthi Selvakumar, Isaac Kim, Rose Simpson)
+    - Customer Support VIC PDF (specific to Victoria region, discussing credit-related issues about payment difficulty)
+    The categories are Inbound, Outbound, Channel Partner, Credit calls, the subcategories are Cancel, Transfer Sale, Move-in Sale, Retention, SMS Sale, Transfer, Move-in, Retention, Credit Quality Assurance, Victoria PDF, Customer Support VIC PDF
     Your Output should be in format [category]:[subcategory]
     """
 
@@ -52,9 +53,8 @@ def classify_call(transcript):
     return response["choices"][0]["message"]["content"].strip()
 
 # Example usage
-# file_path = "movein_2.txt"
-# classification = classify_call(file_path)
-# print(classification)
+file_path = "retention_1.txt"
+classification = classify_call(file_path)
+print(classification)
 
-# print(count_tokens(file_path))
 
