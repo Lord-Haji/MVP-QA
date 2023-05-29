@@ -11,53 +11,59 @@ def extract_data(transcript):
 
 
     extract_prompt = """
+    Current customer: Yes/No/Unsure
+    Life Support: YES/NO
+
+
     Name : 
-    DOB : 
+    DOB: 
     Contact Number : 
-    Email : 
-    Postal Address : 
+    Email: 
+    Postal Address: 
     Solar : 
     Delivery method : 
-    Concession Card : 
-    Issue Date :
+
+    Does ID match caf and call? Yes / No / not confirmed / Not required
+    (if ID doesnt Match update CAF to match)
+    Did Agent confirm OTP (current cust only):
+
+    Concession Card: 
+    Issue Date : 
     Expiry Date : 
+
     Secondary Account Holder Name : 
+    DOB : 
+
+    Contact Number : 
+
     Billing cycle offered : 
+
     Promotions mentioned : 
-    Supply Address : 
+
+    Supply Address: 
     NMI : 
     MIRN : 
 
-    [NOTE: If not confirmed then write - "NOT CONFIRMED"]
+    NOTE: If not confirmed then write - "NOT CONFIRMED"
 
-    [If agent did not capture from the customer's end then write - "NOT CAPTURED"]
+        If agent did not capture from the customer's end then write - "NOT CAPTURED"
 
-    IF BUSINESS
+
     Business name / Account name :
-    ABN :
+    ABN : 
 
-    IF MOVE IN
-    MOVE IN FEE :
-    Date of move in/Connection :
-    Power is currently Off/ On :
-    Advised clear access for connection :
 
-    Correct RATES advised to the customer :
-    PLAN : 
-    IVR : Yes
-    Customer No : 
-    RACT No : 
-    VIC : 
-    Current customer : No
-    Did agent ask how customer heard about us : 
-    Internet asked :
+    MOVE IN FEE: 
+    Date of move in/Connection : 
+    Power is currently off/ On : 
+    Advised clear access for connection : Yes or No 
     """
 
 
     messages = [
         {
             "role": "system",
-            "content": f"extract all this information mention below form the above transcript: '{transcript}'"
+            "content": f"Extract and Identify all data mentioned in this transcript: '{transcript}'"
         },
         {"role": "user", "content": extract_prompt}
     ]

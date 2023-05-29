@@ -39,9 +39,11 @@ def main():
                 st.subheader("Comments")
                 calltype, source = classification.split(":")
 
-                call_data = "Calltype: " + calltype.strip() + "\n" + "Source: " + source + "\n"
+                call_data = "Calltype: " + calltype.strip() + "\n" + "Source: " + source + "\n" + "QA comment: " + status + "ed \n\n\n"
 
-                st.text_area("Comments", value=(call_data + data), key="data", height=850)
+                st.text_area("Comments", value=(call_data + data), key="data", height=900)
+
+
                 if status == "Pass":
                     st.success(str(score) + "\t" +  status, icon="✅")  # Display success message
                 if status == "Fail":
