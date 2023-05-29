@@ -1,12 +1,12 @@
 Understand the call first. Based on the content and context of this conversation, which category and subcategory does it belong to? The options are:
     Inbound:
     - Cancel (customer initiated, expressing dissatisfaction and intent to cancel service and canceled service in the end)
-    - Transfer Sale (customer initiated, discussing transferring their service from an existing provider to us)
+    - Transfer Sale (customer initiated, discussing with customer about transferring their service or offering customer better plan than their existing provider)
     - Move-in Sale (customer initiated, discussing setting up service at a new location)
     - Retention (customer initiated, existing first-energy customer, discussing potential cancellation but can be persuaded to stay and didn't cancel in the end)
     - SMS Sale (customer initiated, discussing purchase or changes to service via SMS, customer was sucessfully served via a text message)
     Outbound:
-    - Transfer (company initiated, discussing transferring customer's service from an existing provider to us)
+    - Transfer (company initiated, discussing with customer about transferring their service or offering customer better plan than their existing provider)
     - Move-in (company initiated, discussing setting up service at a new location for the customer)
     - Retention (company initiated, outreach to customers at risk of cancelling service)
     - SMS Sale (company initiated, promoting or selling services via SMS)
