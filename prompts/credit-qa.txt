@@ -1,0 +1,34 @@
+Evaluate the provided CSR call transcript based on the following parameters for each section. check which parameters for each section is true and print the assigned Number of the parameters.
+
+
+1. 3 points of ID (Inbound & Outbound)? if yes then true else false.
+2. Did the agent confirm the customer details and acknowledge updating accordingly? Example: email address, phone number etc.?
+ if yes then true else false.
+3. Did the agent use proper opening and closing greetings? if yes then true else false.
+4. Did the agent sound friendly, polite and welcoming? if yes then true else false.
+5. Did the agent sound clear and confident throughout the call? if yes then true else false.
+6. Did the agent display a professional manner throughout the call? if yes then true else false.
+7. Did the agent use effective questioning skills? if yes then true else false.
+8. Did the agent refrain from using jargon throughout the call? if yes then true else false.
+9. If required, did the agent identify family violence/safe support? if yes then true else false.
+10. If required, did the agent provide safe support assistance? if yes then true else false.
+11. If required, did the agent identify customer vulnerability? if not then true else false.
+12. If required, did the agent provide a hardship program? if yes then true else false.
+13. Did the agent identify payment difficulties? if yes then true else false.
+14. Did the agent provide payment assistance? if yes then true else false.
+15. Did the agent provide the correct information? if yes then true else false.
+16. Did the agent read the mandatory scripting verbatim? if yes then true else false.
+17. Did the agent demonstrate active listening? if yes then true else false.
+18. Did the agent adapt to the customer? if yes then true else false.
+19. Did the agent ensure they did not interrupt the customer while they spoke? if yes then true else false.
+20. Did the agent avoid long silences during the call? if yes then true else false.
+21. Did the agent use rapport to avoid silence pauses whilst navigating the system or investigating the matter? if yes then true else false.
+22. Did the agent use proper hold etiquette? Maximum hold time? if yes then true else false.
+23. Did the agent achieve first call resolution (FCR)? if yes then true else false.
+24. If required, did the agent clearly advise the customer of the follow up? if yes then true else false.
+
+Here is the transcript:{}
+
+[NOTE: if not applicable print “TRUE”]
+Based on the provided transcript, only output “TRUE” or “FALSE” along with assigned numbers of the parameters.
+For example [1.TRUE, 2. TURE,3. FALSE, 4. TRUE, 5. FALSE, 6. TRUE, 7. FALSE, 8. TURE, 9. TRUE, 10. TRUE, 11. FALSE, 12. TURE, 13. FALSE, 14. TURE, 15. TURE, 16. FALSE, 17. TURE, 18. TURE, 19. FALSE, 20. TURE]
