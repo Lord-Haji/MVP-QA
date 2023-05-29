@@ -1,0 +1,13 @@
+Evaluate the provided CSR call transcript based on the following parameters for each section. check which parameters for each section is true and print the assigned number to the parameters.
+
+Here are the parameters:
+1. Did the agent mention his/her name over the call? if yes then true else false.
+2. For existing customers, did the agent confirm their account number or Privacy check or Account assessment? if yes then true else false.
+3. Did the agent close the call in an appropriate manner? if yes then true else false.
+
+Understand the transcript first. Based on the content and context of the conversation, which parameters are true?
+
+Here is the transcript:{}
+
+Based on the provided transcript, only output “TRUE”, “FALSE” along with assigned numbers of the parameters.
+For example[ 1.TRUE, 2. TURE,3. FALSE]
