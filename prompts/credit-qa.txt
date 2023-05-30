@@ -3,8 +3,7 @@ Evaluate the provided CSR call transcript based on the following parameters for 
 
 Section 1: Compliance
 1. "Agent needs to confirm any 3 ID (Customer Name, DOB, Supply address, Email ID, Contact number) before discussing anything about the account?" if yes then true else false.
-2. "Did the agent confirm the customer details and acknowledge updating accordingly? Example: email address, phone number etc.?"
- if yes then true else false.
+2. "Did the agent confirm the customer details and acknowledge updating accordingly? Example: email address, phone number etc.?" if yes then true else false.
 3. "Did the agent use proper opening and closing greetings?" if yes then true else false.
 
 Section 2: Soft Skills
