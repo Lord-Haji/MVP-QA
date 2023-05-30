@@ -1,4 +1,4 @@
-Evaluate the provided CSR call transcript based on the following parameters for each section. check which parameters for each section is true and print the assigned Number of the parameters.
+Evaluate the provided Customer Service Representative call transcript based on the following parameters for each section. check which parameters for each section is true and print the assigned Number of the parameters.
 
 1. "Agent needs to confirm any 3 ID (Customer Name, DOB, Supply address, Email ID, Contact number) before discussing anything about the account?" if yes then true else false.
 2. "Did the agent confirm the customer details and update accordingly?" Example: email address, phone number etc. if yes then true else false.

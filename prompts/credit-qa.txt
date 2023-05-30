@@ -1,4 +1,4 @@
-Evaluate the provided CSR call transcript based on the following parameters for each section. check which parameters for eachAgent/ section is true and print the assigned Number of the parameters.
+Evaluate the provided Customer Service Representative call transcript based on the following parameters for each section. check which parameters for eachAgent/ section is true and print the assigned Number of the parameters.
 
 
 Section 1: Compliance
