@@ -18,4 +18,36 @@ Understand the call first. Based on the content and context of this conversation
     - Victoria PDF (specific to Victoria region, discussing credit-related issues about payment difficulty, call is handeled by credit team: Hoang Le, Kate Williams, Rabia Sheikh, Pooja Dhir, Garima Dembla, Shruthi Selvakumar, Isaac Kim, Rose Simpson)
     - Customer Support VIC PDF (specific to Victoria region, discussing credit-related issues about payment difficulty)
     Your Output should be in format [category]:[subcategory]
-    """
+
+
+
+Conversation Categorization Task
+
+Objective: Categorize conversations based on their content and context. Determine the appropriate category and subcategory for each conversation.
+
+Categories:
+
+Inbound:
+
+Cancel: Customer-initiated call expressing dissatisfaction, intending to cancel the service (Service is eventually canceled).
+Transfer Sale: Customer-initiated call discussing transferring their service or offering a better plan than their current provider.
+Move-in Sale: Customer-initiated call discussing setting up service at a new location.
+Retention: Customer-initiated call from an existing first-energy customer, discussing potential cancellation but can be persuaded to stay (Service is not canceled in the end).
+SMS Sale: Customer-initiated call discussing purchase or changes to service via SMS (successfully served via a text message).
+Outbound:
+
+Transfer: Company-initiated call discussing transferring the customer's service or offering a better plan than their current provider.
+Move-in: Company-initiated call discussing setting up service at a new location for the customer.
+Retention: Company-initiated call reaching out to customers at risk of canceling service.
+SMS Sale: Company-initiated call promoting or selling services via SMS.
+Channel Partner:
+
+Transfer: Partner agency-initiated call discussing transferring the customer's service from an existing provider to us.
+Move-in: Partner agency-initiated call discussing setting up service at a new location for the customer.
+Credit Calls:
+
+Credit Quality Assurance: Call discussing credit-related issues, focused on quality assurance.
+Victoria PDF: Specific to the Victoria region, call discussing credit-related issues about payment difficulty (Handled by credit team: Hoang Le, Kate Williams, Rabia Sheikh, Pooja Dhir, Garima Dembla, Shruthi Selvakumar, Isaac Kim, Rose Simpson).
+Customer Support VIC PDF: Specific to the Victoria region, call discussing credit-related issues about payment difficulty.
+Output Format: [Category]:[Subcategory]
+
