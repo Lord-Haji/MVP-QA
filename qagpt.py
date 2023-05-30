@@ -72,8 +72,8 @@ def generate_report(transcript, call_type):
         Section 1: Call Opening
         1. "Did the agent mention his/her name over the call?", if yes then true else false.
         2. For existing customers, did the agent confirm:
-        2.a Account number and Privacy check?
-        2.b. Account assessment?" if yes then true else false.
+        Account number and Privacy check?
+        and Account assessment?" if yes then true else false.
         3. "Did the agent inquire about RACT Number (Tasmania only)?" if yes then true else false.
 
         Section 2: Compliance
@@ -123,11 +123,11 @@ def generate_report(transcript, call_type):
         4. “Did the agent advice and did the customer clearly understand about the cooling off period?" if yes then true else false.
         5. “Did the agent give the customer a conscionable decision?" if yes then true else false.
         6. Did the agent identify customer vulnerability and take appropriate steps?
-        6.a. “Customer sounds aloof (not engaged)" if yes then true else false.
-        6.b. “Confused" if yes then true else false.
-        6.c. “hearing issues" if yes then true else false.
-        6.d. “repeating themselves" if yes then true else false.
-        6.e “questioning continuously what the call is all about" if yes then true else false.
+        “Customer sounds aloof (not engaged)" if yes then true else false.
+        and “Confused" if yes then true else false.
+        and “hearing issues" if yes then true else false.
+        and “repeating themselves" if yes then true else false.
+        and “questioning continuously what the call is all about" if yes then true else false.
         7. “Did the agent use potential misleading or deceptive statements?" if not then true else false.
 
         Section 3: Authorized contact
@@ -136,11 +136,11 @@ def generate_report(transcript, call_type):
         Section 4: Obtaining and Presenting Skills
         14. "Did the agent confirm Life Support?" if yes then true else false.
         15. Did the agent confirm customer details:
-        15.a. “Account Number" if yes then true else false.
-        15.b. “Full Name" if yes then true else false.
-        15.c. “Date of Birth" if yes then true else false.
-        15.d. “Address" if yes then true else false.
-        15.e. “NMI" if yes then true else false.
+        “Account Number" if yes then true else false.
+        and “Full Name" if yes then true else false.
+        and “Date of Birth" if yes then true else false.
+        and “Address" if yes then true else false.
+        and “NMI" if yes then true else false.
         16. "Did the agent confirm Concession?" if yes then true else false.
         17. "Did the agent offer to read out the rates?" if yes then true else false.
         18. "Did Agent offer to show benefits of the retention offer against competitors?" if yes then true else false.
@@ -174,11 +174,11 @@ def generate_report(transcript, call_type):
         4. “Did the agent advice and did the customer clearly understand about the cooling off period?" if yes then true else false.
         5. “Did the agent give the customer a conscionable decision?" if yes then true else false.
         6. Did the agent identify customer vulnerability and take appropriate steps?
-        6.a. “Customer sounds aloof (not engaged)" if yes then true else false.
-        6.b. “Confused" if yes then true else false.
-        6.c. “hearing issues" if yes then true else false.
-        6.d. “repeating themselves" if yes then true else false.
-        6.e “questioning continuously what the call is all about" if yes then true else false.
+        “Customer sounds aloof (not engaged)" if yes then true else false.
+        and “Confused" if yes then true else false.
+        and “hearing issues" if yes then true else false.
+        and “repeating themselves" if yes then true else false.
+        and “questioning continuously what the call is all about" if yes then true else false.
         7. “Did the agent use potential misleading or deceptive statements?" if not then true else false.
 
         Section 3: Authorized contact
@@ -218,9 +218,11 @@ def generate_report(transcript, call_type):
 
         #### Outbound params goes here
 
-        "channeltransfer": """
-        
-        """
+        ### Channel params goes here
+
+        "creditqualityassurance": """
+
+        """,
 
 
         "example": """
@@ -256,7 +258,7 @@ def generate_report(transcript, call_type):
         model="gpt-3.5-turbo",
         messages=messages,
         temperature=0,
-        max_tokens=500,
+        max_tokens=650,
     )
 
     return response["choices"][0]["message"]['content'].strip()
@@ -278,12 +280,12 @@ def generate_report(transcript, call_type):
 
 # Example usage
 
-# file_path = 'transcripts/movein_2.txt'
+# file_path = 'transcripts/retention_2.txt'
 # file = open(file_path, 'r')
 
 # transcript = file.read()
 
-# call_type = "inboundmoveinsale"
+# call_type = "inboundretention"
 
 # report = generate_report(transcript, call_type)
 # print(report)

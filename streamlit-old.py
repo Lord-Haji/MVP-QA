@@ -23,7 +23,7 @@ def main():
         # Display the transcription
         st.subheader("Transcription")
         # st.text_area("transcript", value=transcript_text, key="transcript_text", height=800)
-        st.write(transcript_text)
+        st.text_area("transcript", value=transcript_text, key="transcript_text")
 
         # Show "Send for Review" button when transcription is done
         if transcript_text:
