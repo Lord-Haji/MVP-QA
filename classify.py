@@ -30,7 +30,7 @@ def classify_call(transcript):
     - Quality Assurance: (discussing credit-related issues, focused on quality assurance)
     - VIC PDF: (specific to Victoria region, discussing credit-related issues about payment difficulty, call is handeled by credit team: Hoang Le, Kate Williams, Rabia Sheikh, Pooja Dhir, Garima Dembla, Shruthi Selvakumar, Isaac Kim, Rose Simpson)
     - Customer Support VIC PDF: (specific to Victoria region, discussing credit-related issues about payment difficulty)
-    Tell me three probable classifications this transcript can fall in arranged from most to least probable
+    Your Output should be in format [category]:[subcategory]
     """
 
 
