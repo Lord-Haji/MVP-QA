@@ -1,0 +1,51 @@
+Evaluate the provided CSR call transcript based on the following parameters for each section. check which parameters for each section is true and print the assigned Number of the parameters.
+
+Section 1: Call Opening
+1. "Did the agent mention his/her name over the call?" if yes then true else false.
+2. Did the agent mention the company's name over the call within 400 words of the transcript? if yes then true else false.
+3. Did the agent mention the purpose of the call? if yes then true else false.
+4. Did the agent mention that "this call is recorded for quality and compliance" within 400 words of the transcript? if yes then true else false.
+5. "Did the agent inquire about RACT Number (Tasmania only)?" if yes then true else false.
+
+Section 2: Compliance
+6. "Did the agent present the product accordingly?" if yes then true else false.
+7. "Did the Sales Agent tailored his approach when the customer clearly indicated that he/she is after information only and offered the customer requested with the option of follow up in a few days to help with comparisons and selecting the right electricity/gas plan?" if yes then true else false.
+8. "Did the Agent clearly explain that the Welcome Pack is a contract binding document?" if yes then true else false.
+9. "Did the agent advice and did the customer clearly understand about the cooling off period?" if yes then true else false.
+10. "Did the agent give the customer a conscious decision?" if yes then true else false.
+11. "Did the agent use potential misleading or deceptive statements?" if not then true else false.
+
+Section 3: Authorised contact
+12. "Did the customer indicate/state they are not authorized to conduct the transfer?" if yes then true else false.
+
+Section 4: Obtaining and Presenting Skills
+13. "Did the agent confirm Life Support?" if yes then true else false.
+14. "Did the agent confirm the NMI/MIRN and/or supply address?" if yes then true else false.
+15. "Did the agent confirm Concession?" if yes then true else false.
+16. "Did the agent offer to read out the rates?" if yes then true else false.
+17. "Did the Agent Offer to do Bill Comparison?" if yes then true else false.
+18. "Did the agent provide an estimation for low, medium, and high usage in Victoria? if yes then true else false.
+    [Parameter 15. Only applicable if customer is from Victoria]
+19. "Did the agent answer customer questions correctly?" if yes then true else false.
+
+
+Section 5: Soft Skills
+20. "Did the agent ensure they did not interrupt the customer while they spoke?" if yes then true else false.
+21. "Did the agent display a professional manner throughout the call?" if yes then true else false.
+22. "Did the agent proactively add value throughout the call?" if yes then true else false.
+23. "Did the agent sound clear and confident throughout the call?" if yes then true else false.
+24. "Did the agent refrain from using jargon during the call?" if yes then true else false.
+25. "Did the agent sound friendly, polite, and welcoming?" if yes then true else false.
+26. "Did the agent use effective questioning skills?" if yes then true else false.
+27. "Did the agent demonstrate active listening?" if yes then true else false.
+28. "Did the agent adapt to the customer?" if yes then true else false.
+
+  Section 6: End Call
+29. "Did the agent ask the customer, 'Do you have any other questions while I have you'?"  if yes then true else false.
+30. "Did the agent close the call in an appropriate manner?" if yes then true else false.
+
+Here is the transcript:{}
+
+[NOTE: if not applicable print “TRUE”]
+Based on the provided transcript, only output “TRUE” or “FALSE” along with assigned numbers of the parameters.
+For example [1.TRUE, 2. TURE,3. FALSE, 4. TRUE, 5. FALSE, 6. TRUE, 7. FALSE, 8. TURE, 9. TRUE, 10. TRUE, 11. FALSE, 12. TURE, 13. FALSE, 14. TURE, 15. TURE, 16. FALSE, 17. TURE, 18. TURE, 19. FALSE, 20. TURE]
