@@ -3,7 +3,7 @@ import openai
 from time import time
 import re
 from database import fetch_transcription, cache_transcription
-from qagpt import generate_report
+from qagpt_test import generate_report
 from classify import classify_call
 from dataextractor import extract_data
 from config import API_KEY

@@ -46,7 +46,7 @@ def generate_report(transcript, call_type):
         13. "Did the agent confirm Concession?" if yes then true else false.
         14. "Did the agent offer to read out the rates?" if yes then true else false.
         15. "Did the Agent Offer to do Bill Comparison?" if yes then true else false.
-        15. "Did the agent provide an estimation for low, medium, and high usage in Victoria? if yes or if customer not from Victoria then true else false.
+        16. "Did the agent provide an estimation for low, medium, and high usage in Victoria? if yes or if customer not from Victoria then true else false.
         17. "Did the agent answer customer questions correctly?" if yes then true else false.
 
 
@@ -179,7 +179,7 @@ def generate_report(transcript, call_type):
 
 
         #### Outbound params goes here
-        
+
 
         ### Channel params goes here
 
@@ -243,12 +243,12 @@ def generate_report(transcript, call_type):
 
 # Example usage
 
-file_path = 'transcripts/incoming.txt'
-file = open(file_path, 'r')
+# file_path = 'transcripts/incoming.txt'
+# file = open(file_path, 'r')
 
-transcript = file.read()
+# transcript = file.read()
 
-call_type = "inboundretention"
+# call_type = "inboundretention"
 
-report = generate_report(transcript, call_type)
-print(report)
+# report = generate_report(transcript, call_type)
+# print(report)

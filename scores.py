@@ -1,14 +1,15 @@
 scores_dict = {
     "inboundcancel": [50, 30, 20],
-    "inboundtransfersale": [7, 6, 3, 3, 3, 3, 3, 3, 2, 2, 2, 2, 2, 2, 2, 2, 6, 3, 3, 3, 3, 3, 3, 3, 3, 3, 6, 6, 8],
-    "inboundmoveinsale": [3, 3, 3, 3, 3, 8, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 4, 4, 3],
-    "inboundretention": [3, 3, 3, 3, 3, 8, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 4, 4, 3],
-    "inboundsmssale": [3, 3, 3, 3, 3, 8, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 4, 4, 3]
+    "inboundtransfersale": [7, 6, 3, 3, 3, 3, 3, 10, 3, 2, 2, 2, 2, 2, 2, 2, 6, 3, 3, 3, 3, 3, 3, 3, 3, 3, 6, 6],
+    "inboundmoveinsale": [7, 6, 3, 3, 3, 3, 3, 2, 3, 10, 2, 2, 2, 2, 2, 2, 6, 3, 3, 3, 3, 3, 3, 3, 3, 3, 6, 6],
+    "inboundretention": [4, 4, 4, 4, 10, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 6],
+    "inboundsmssale": [8, 8, 8, 8, 8, 8, 8, 8, 10, 8, 8, 8, 2]
 }
 
 
-# print(len(inboundmoveinsale))
-# print(sum(inboundmoveinsale))
+print(scores_dict.get("inboundretention"))
+print(len(scores_dict.get("inboundretention")))
+print(sum(scores_dict.get("inboundretention")))
 
 
 # import random
