@@ -3,7 +3,7 @@ import openai
 from time import time
 import re
 from database import fetch_transcription, cache_transcription
-from qagpt_test import generate_report
+from qagpt import generate_report
 from classify import classify_call
 from dataextractor import extract_data
 from config import API_KEY
@@ -85,7 +85,7 @@ class AudioTranscription:
         converted_string = "".join([char.lower() for char in converted_string if char.isalnum() and char not in characters_to_remove])
 
         print(converted_string)
-        report += generate_report(self.transcript, converted_string)
+        report = generate_report(self.transcript, converted_string)
         self.report = report
 
 
