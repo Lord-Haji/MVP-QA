@@ -77,7 +77,7 @@ class AudioTranscription:
     def qa_review(self):
         # self.transcribe()
         self.classify_call()
-        report = self.call_category + "\n"
+        # report = self.call_category + "\n"
 
         # Standardize Call Category string since GPT-3.5-Turbo Doesnt generate uniform results as of 24-05-23
         characters_to_remove = [" ", ":", "-", ","]
