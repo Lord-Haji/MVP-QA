@@ -22,7 +22,8 @@ def main():
 
         # Display the transcription
         st.subheader("Transcription")
-        st.text_area("transcript", value=transcript_text, key="transcript_text", height=800)
+        # st.text_area("transcript", value=transcript_text, key="transcript_text", height=800)
+        st.write(transcript_text)
 
         # Show "Send for Review" button when transcription is done
         if transcript_text:
@@ -36,12 +37,16 @@ def main():
                 # Display the returned review
                 # st.subheader("Review")
                 # st.text_area("Review Text", value=review_text, key="review_text")
-                st.subheader("Comments")
+                st.subheader("QA Review")
                 calltype, source = classification.split(":")
 
                 call_data = "Calltype: " + calltype.strip() + "\n" + "Source: " + source + "\n" + "QA comment: " + status + "ed \n\n\n"
 
-                st.text_area("Comments", value=(call_data + data), key="data", height=900)
+                data += "\n\n"
+
+                # st.write(call_data + data)
+
+                st.text_area("review", value=(call_data + data + review_text), height = 1000)
 
 
                 if status == "Pass":

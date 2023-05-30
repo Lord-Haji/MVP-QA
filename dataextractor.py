@@ -25,7 +25,7 @@ def extract_data(transcript):
 
     Does ID match caf and call? Yes / No / not confirmed / Not required
     (if ID doesnt Match update CAF to match)
-    Did Agent confirm OTP (current cust only):
+    Did Agent confirm OTP (current customer only):
 
     Concession Card: 
     Issue Date : 
