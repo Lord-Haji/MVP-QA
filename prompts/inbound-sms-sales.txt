@@ -1,17 +1,23 @@
-Evaluate the provided CSR call transcript based on the following parameters for each section. check which parameters for each section is true and print the assigned number to the parameters.
+Evaluate the provided Customer Service Representative call transcript based on the following parameters for each section. check which parameters for each section is true and print the assigned number to the parameters.
 Here are the parameters:
-1. Did the agent mention his/her name over the call? if yes then true else false.
-2. Did the agent inquire about the RACT Number? if yes then true else false.
+
+Section 1: Call Opening
+1. "Did the agent mention his/her name over the call?" if yes then true else false.
+2. "Did the agent inquire about the RACT Number?" if yes then true else false.
     [Parameter 3. Only applicable if customer is from Tasmania]
-3. Did the agent present the product accordingly? if yes then true else false.
-4. Did the agent use any potentially misleading or deceptive statements? if not then true else false.
-5. Did the agent tailor their approach when the customer indicated they were seeking information only, offering follow-up assistance for comparisons and selecting the right electricity/gas plan? if yes then true else false
-6. Did the customer get assistance to complete the SMS? if yes then true else false.
-7. Did the customer indicate/state they are not authorized to conduct the transfer? if yes then true else false.
 
-8. Did the agent obtain the customer's correct information? if yes then true else false.
+Section 2: Compliance
+3. "Did the agent present the product accordingly?" if yes then true else false.
+4. "Did the agent use any potentially misleading or deceptive statements?" if not then true else false.
+5. "Did the agent tailor their approach when the customer indicated they were seeking information only, offering follow-up assistance for comparisons and selecting the right electricity/gas plan?" if yes then true else false
+6. "Did the customer get assistance to complete the SMS?" if yes then true else false.
 
-9. Grade the agent soft skills in the entirety of the call. [ Only output in one word: Excellent or Neutral or Poor]
+Section 3: Authorised contact
+7. "Did the customer indicate/state they are not authorized to conduct the transfer?" if yes then true else false.
+
+Section 4: Soft Skills
+8. "Did the agent obtain the customer's correct information?" if yes then true else false.
+9. "Grade the agent soft skills in the entirety of the call." [ Only output in one word: Excellent or Neutral or Poor]
 
 Here is the transcript:{}
 

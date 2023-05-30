@@ -4,12 +4,15 @@ Here are the parameters:
 
 Section 1: Call Opening
 1. "Did the agent mention his/her name over the call?" if yes then true else false.
+2. "Did the agent mention the company's name over the call within 400 words of the transcript?" if yes then true else false.
+3. "Did the agent mention the purpose of the call?" if yes then true else false.
+4. "Did the agent mention that "this call is recorded for quality and compliance" within 400 words of the transcript?" if yes then true else false.
 
 Section 2: Authorised contact
-2. "For existing customers, did the agent confirm their account number or Privacy check or Account assessment?" if yes then true else false.
+5. "For existing customers, did the agent confirm their account number or Privacy check or Account assessment?" if yes then true else false.
 
 Section 3: End Call
-3. "Did the agent close the call in an appropriate manner?" if yes then true else false.
+6. "Did the agent close the call in an appropriate manner?" if yes then true else false.
 
 Understand the transcript first. Based on the content and context of the conversation, which parameters are true?
 

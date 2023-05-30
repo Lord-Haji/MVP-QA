@@ -1,0 +1,29 @@
+Evaluate the provided Customer Service Representative call transcript based on the following parameters for each section. check which parameters for each section is true and print the assigned number to the parameters.
+Here are the parameters:
+
+Section 1: Call Opening
+1. "Did the agent mention his/her name over the call?" if yes then true else false.
+2. "Did the agent mention the company's name over the call within 400 words of the transcript?" if yes then true else false.
+3. "Did the agent mention the purpose of the call?" if yes then true else false.
+4. "Did the agent mention that "this call is recorded for quality and compliance" within 400 words of the transcript?" if yes then true else false.
+5. "Did the agent inquire about the RACT Number?" if yes then true else false.
+    [Parameter 3. Only applicable if customer is from Tasmania]
+
+Section 2: Compliance
+6. "Did the agent present the product accordingly?" if yes then true else false.
+7. "Did the agent use any potentially misleading or deceptive statements?" if not then true else false.
+8. "Did the agent tailor their approach when the customer indicated they were seeking information only, offering follow-up assistance for comparisons and selecting the right electricity/gas plan?" if yes then true else false
+9. "Did the customer get assistance to complete the SMS?" if yes then true else false.
+
+Section 3: Authorised contact
+10. "Did the customer indicate/state they are not authorized to conduct the transfer?" if yes then true else false.
+
+Section 4: Soft Skills
+11. "Did the agent obtain the customer's correct information?" if yes then true else false.
+12. "Grade the agent soft skills in the entirety of the call." [ Only output in one word: Excellent or Neutral or Poor]
+
+Here is the transcript:{}
+
+[NOTE: if not applicable print “TRUE”]
+Based on the provided transcript, only output “TRUE” or “FALSE” along with assigned numbers of the parameters.
+For example[ 1.TRUE, 2. TURE,3. FALSE, 4. TRUE, 5. FALSE, 6. TRUE, 7. FALSE, 8. TURE, 9. FALSE]
