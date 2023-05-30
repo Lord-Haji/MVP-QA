@@ -4,38 +4,42 @@ Here are the parameters:
 
 Section 1: Call Opening
 1. "Did the agent mention his/her name over the call?" if yes then true else false.
+2. "Did the agent mention the company's name over the call within 400 words of the transcript?" if yes then true else false.
+3. "Did the agent mention the purpose of the call?" if yes then true else false.
+4. "Did the agent mention that "this call is recorded for quality and compliance" within 400 words of the transcript?" if yes then true else false.
 
 Section 2: Compliance
-2. "Did the agent present the product accordingly?" if yes then true else false.
-3. "Did Sales Agent tailored his approach when customer clearly indicated that he/she is after information only and offered customer requests with the option of follow up in a few days to help with comparisons and selecting the right electricity/gas plan?" if yes then true else false.
-4. "Did the agent advise the customer about the cooling-off period, and did the customer clearly understand it?" if yes then true else false.
-5. "Did the agent use any potentially misleading or deceptive statements?" if not then true else false.
+5. "Did the agent present the product accordingly?" if yes then true else false.
+6. "Did Sales Agent tailored his approach when customer clearly indicated that he/she is after information only and offered customer requests with the option of follow up in a few days to help with comparisons and selecting the right electricity/gas plan?" if yes then true else false.
+7. "Did Agent clearly explained that Welcome Pack is a contract bounding document?" if not then true else false.
+8. "Did the agent advise the customer about the cooling-off period, and did the customer clearly understand it?" if yes then true else false.
+9. "Did the agent use any potentially misleading or deceptive statements?" if not then true else false.
 
 Section 3: Authorised contact
-6. "Is the customer a primary account holder?" if not then true else false.
+10. "Is the customer a primary account holder?" if not then true else false.
 
 Section 4: Obtaining and Presenting Skills
-7. "Did the agent confirm Life Support?" if yes then true else false.
-8. "Did the agent confirm Concession?" if yes then true else false.
-9. "Did the agent offer to read out the rates?" if yes then true else false.
-10. "Did Agent offer to show benefits of the retention offer against competitors?" if yes then true else false.
-11. "Did the agent answer customer questions correctly?" if yes then true else false.
+11. "Did the agent confirm Life Support?" if yes then true else false.
+12. "Did the agent confirm Concession?" if yes then true else false.
+13. "Did the agent offer to read out the rates?" if yes then true else false.
+14. "Did Agent offer to show benefits of the retention offer against competitors?" if yes then true else false.
+15. "Did the agent answer customer questions correctly?" if yes then true else false.
 
 
 Section 4: Soft Skills
-12. "Did the agent ensure they did not interrupt the customer while they spoke?" if yes then true else false.
-13. "Did the agent display a professional manner throughout the call?" if yes then true else false.
-14. "Did the agent proactively add value throughout the call?" if yes then true else false.
-15. "Did the agent sound clear and confident throughout the call?" if yes then true else false.
-16. "Did the agent refrain from using jargon during the call?" if yes then true else false.
-17. "Did the agent sound friendly, polite, and welcoming?" if yes then true else false.
-18. "Did the agent use effective questioning skills?" if yes then true else false.
-19. "Did the agent demonstrate active listening?" if yes then true else false.
-20. "Did the agent adapt to the customer?" if yes then true else false.
+16. "Did the agent ensure they did not interrupt the customer while they spoke?" if yes then true else false.
+17. "Did the agent display a professional manner throughout the call?" if yes then true else false.
+18. "Did the agent proactively add value throughout the call?" if yes then true else false.
+19. "Did the agent sound clear and confident throughout the call?" if yes then true else false.
+20. "Did the agent refrain from using jargon during the call?" if yes then true else false.
+21. "Did the agent sound friendly, polite, and welcoming?" if yes then true else false.
+22. "Did the agent use effective questioning skills?" if yes then true else false.
+23. "Did the agent demonstrate active listening?" if yes then true else false.
+24. "Did the agent adapt to the customer?" if yes then true else false.
 
 Section 5: End Call
-21. "Did the agent ask the customer, 'Do you have any other questions while I have you'?" if yes then true else false.
-22. "Did the agent close the call in an appropriate manner?" if yes then true else false.
+25. "Did the agent ask the customer, 'Do you have any other questions while I have you'?" if yes then true else false.
+26. "Did the agent close the call in an appropriate manner?" if yes then true else false.
 
 Understand the transcript first. Based on the content and context of the conversation, which parameters are true?
 
