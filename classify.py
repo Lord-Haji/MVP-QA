@@ -7,7 +7,7 @@ openai.api_key = API_KEY
 
 
 
-def classify_call(transcript):
+def classify_audio(transcript):
 
 
     classify_prompt = """
