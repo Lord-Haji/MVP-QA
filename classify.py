@@ -44,7 +44,7 @@ def classify_audio(transcript):
     ]
 
     response = openai.ChatCompletion.create(
-        model="gpt-3.5-turbo",
+        model="gpt-3.5-turbo-16k",
         messages=messages,
         temperature=0,
         max_tokens=100,
