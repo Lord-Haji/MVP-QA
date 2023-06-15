@@ -1,6 +1,7 @@
 import os
 import streamlit as st
-from app import AudioTranscription
+from audioquery import AudioQuery
+import pandas as pd
 
 def main():
 
@@ -12,47 +13,71 @@ def main():
     if audio_file:
         # Process the uploaded audio file
         file_name = os.path.splitext(os.path.basename(audio_file.name))[0]
-        audio_transcription = AudioTranscription(audio_file, file_name)
+        audio_query = AudioQuery(audio_file, file_name)
 
         transcript_text = ""
 
         # Transcribe and save
         with st.spinner("Transcribing audio..."):
-            transcript_text = audio_transcription.transcribe()
+            transcript_text = audio_query.transcribe()
 
         # Display the transcription
         st.subheader("Transcription")
-        st.text_area("transcript", value=transcript_text, key="transcript_text", height=800)
+        st.text_area("transcript", value=transcript_text, key="transcript_text", height=calculate_height(transcript_text))
 
         # Button to classify call
         if st.button("Classify Call"):
             with st.spinner("Classifying call..."):
-                classification = audio_transcription.classify_call()
-                st.text_area("Classification: ", value=classification, key="classification")
+                classification = audio_query.classify_call()
+                # st.text_area("classification", value=classification, key="classification")
+                display_table(classification)
 
         # Button to extract data
-        if st.button("Extract Data"):
-            with st.spinner("Extracting data..."):
-                data = audio_transcription.extract_data()
-                st.text_area("Data: ", value=data, key="data", height = 500)
+        # if st.button("Extract Data"):
+        #     with st.spinner("Extracting data..."):
+        #         data = audio_query.extract_data()
+        #         st.text_area("Data: ", value=data, key="data", height = 500)
 
-        # Button to review transcription
-        if st.button("Review Transcription"):
-            with st.spinner("Reviewing audio..."):
-                review_text, score, status = audio_transcription.qa_review()
+        # # Button to review transcription
+        # if st.button("Review Transcription"):
+        #     with st.spinner("Reviewing audio..."):
+        #         review_text, score, status = audio_query.qa_review()
 
-            st.subheader("QA Review")
+        #     st.subheader("QA Review")
 
-            # call_data = "Calltype: " + calltype.strip() + "\n" + "Source: " + source + "\n" + "QA comment: " + status + "ed \n\n\n"
+        #     # call_data = "Calltype: " + calltype.strip() + "\n" + "Source: " + source + "\n" + "QA comment: " + status + "ed \n\n\n"
 
-            # num_lines = call_data.count('\n') + data.count('\n') + 3  # Add 3 for extra lines
+        #     # num_lines = call_data.count('\n') + data.count('\n') + 3  # Add 3 for extra lines
 
-            st.text_area("Review", value=review_text, height=900)
+        #     st.text_area("Review", value=review_text, height=900)
 
-            if status == "Pass":
-                st.success(str(score) + "\t" + status, icon="✅")  # Display success message
-            if status == "Fail":
-                st.error(str(score) + "\t" + status, icon="❌")
+        #     if status == "Pass":
+        #         st.success(str(score) + "\t" + status, icon="✅")  # Display success message
+        #     if status == "Fail":
+        #         st.error(str(score) + "\t" + status, icon="❌")
+
+def calculate_height(text, max_line_length=60, pixels_per_line=12):
+
+    lines = len(text) // max_line_length
+    return lines * pixels_per_line
+
+def display_table(dictionary):
+    keys = list(dictionary.keys())
+    values = list(dictionary.values())
+
+    table = "| "
+    table += " | ".join(keys)
+    table += " |\n"
+
+    table += "| "
+    table += " | ".join(["---"] * len(keys))
+    table += " |\n"
+
+    table += "| "
+    table += " | ".join(values)
+    table += " |\n"
+
+    st.markdown(table)
 
 if __name__ == "__main__":
     main()

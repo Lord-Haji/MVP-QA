@@ -11,26 +11,41 @@ def classify_audio(transcript):
 
 
     classify_prompt = """
-    Understand the call first. Based on the content and context of this conversation, which category and subcategory does it belong to? The options are:
-    Inbound:
-    - Cancel: (customer initiated, expressing dissatisfaction and intent to cancel service and canceled service in the end)
-    - Transfer Sale: (customer initiated, discussing transferring their service from an existing provider to us)
-    - Move-in Sale: (customer initiated, discussing setting up service at a new location)
-    - Retention: (customer initiated, existing first-energy customer, discussing potential cancellation but can be persuaded to stay and didn't cancel in the end)
-    - SMS Sale: (customer initiated, customer was served or sent an SMS or text message any time throughout the duration of the transcript)
-    Outbound:
-    - Transfer: (company initiated, discussing transferring customer's service from an existing provider to us)
-    - Move-in: (company initiated, discussing setting up service at a new location for the customer)
-    - Retention: (company initiated, outreach to customers at risk of cancelling service)
-    - SMS Sale: (company initiated, promoting or selling services via SMS)
-    Channel:
-    - Transfer: (initiated by a partner agency, discussing transferring customer's service from an existing provider to us)
-    - Move-in: (initiated by a partner agency, discussing setting up service at a new location for the customer)
-    Credit:
-    - Quality Assurance: (discussing credit-related issues, focused on quality assurance)
-    - VIC PDF: (specific to Victoria region, discussing credit-related issues about payment difficulty, call is handeled by credit team: Hoang Le, Kate Williams, Rabia Sheikh, Pooja Dhir, Garima Dembla, Shruthi Selvakumar, Isaac Kim, Rose Simpson)
-    - Customer Support VIC PDF: (specific to Victoria region, discussing credit-related issues about payment difficulty)
-    Your Output should be in format [category]:[subcategory]
+    The list of categories and subcategories along with an explanation of when which is appropriate are described in the text delimeted by triple backticks \
+    the categories are listed below along with the possible subcateogires belonging to a category are delimeted with #### and listed
+    ```
+    Inbound: (customer initiated)
+    ####
+    - Cancel: (expressing dissatisfaction and intent to cancel service and canceled service in the end)
+    - Transfer Sale: (discussing transferring their service from an existing provider to us)
+    - Move-in Sale: (discussing setting up service at a new location)
+    - Retention: (existing first-energy customer, discussing potential cancellation but can be persuaded to stay and didn't cancel in the end)
+    - SMS Sale: (customer was served or sent an SMS or text message any time throughout the duration of the transcript)
+    ####
+    Outbound: (company initiated)
+    ####
+    - Transfer: (discussing transferring customer's service from an existing provider to us)
+    - Move-in: (discussing setting up service at a new location for the customer)
+    - Retention: (outreach to customers at risk of cancelling service)
+    - SMS Sale: (promoting or selling services via SMS)
+    ####
+    Channel: (initiated by partner agency)
+    ####
+    - Transfer: (discussing transferring customer's service from an existing provider to us)
+    - Move-in: (discussing setting up service at a new location for the customer)
+    ####
+    Credit: (discussing credit-related or transaction issues)
+    ####
+    - Quality Assurance: (focused on quality assurance)
+    - VIC PDF: (specific to Victoria region, discussing issues about payment difficulty, call is handeled by credit team: Hoang Le, Kate Williams, Rabia Sheikh, Pooja Dhir, Garima Dembla, Shruthi Selvakumar, Isaac Kim, Rose Simpson)
+    - Customer Support VIC PDF: (specific to Victoria region, discussing issues about payment difficulty)
+    ####
+    
+    The steps you should follow to analyze the call are as follows
+    Step 1: Classify the transcript into one of the following categories
+    Step 2: Classify the transcript into one of the subcategories belonging to the identified category
+
+    Your Output should be a JSON object with the keys being category , subcategory and reason and the values being the classified category and subcategory string converted into all lowercase without special characters and reason should be your reasoning for picking the specific category and subcategory
     """
 
 

@@ -7,16 +7,17 @@ from qagpt_test import generate_report
 from classify import classify_audio
 from dataextractor import extract_data
 from config import API_KEY
+import json
 
-from scores import scores_dict
+# from scores import scores_dict
 
 
-class AudioTranscription:
+class AudioQuery:
     def __init__(self, audio_file, file_name):
         self.audio_file = audio_file
         self.file_name = file_name
         self.transcript = ""
-        self.call_category = ""
+        self.call_category = {}
         self.report = []
         self.data = ""
 
@@ -62,8 +63,17 @@ class AudioTranscription:
     @timer
     def classify_call(self):
         # transcript_text = self.transcribe()
-        self.call_category = classify_audio(self.transcript)
-        return self.call_category
+        if (len(self.transcript) == 0):
+            self.transcribe()
+        
+        call_category = classify_audio(self.transcript)
+        try:
+            category_dict = json.loads(classify_audio(self.transcript))
+            self.call_category = category_dict
+            return self.call_category
+        except json.JSONDecodeError as e:
+            print(f"Error decoding JSON: {str(e)}")
+
 
     def extract_data(self):
         self.classify_call()
@@ -118,21 +128,23 @@ class AudioTranscription:
 # Rest of your code...
 
 def main():
-    audio_file_name = "audio/movein_2.mp3"
+    # audio_file_name = "audio/movein_2.mp3"
     
 
-    file_name = os.path.splitext(os.path.basename(audio_file_name))[0]
+    # file_name = os.path.splitext(os.path.basename(audio_file_name))[0]
 
-    with open(audio_file_name, "rb") as audio_file:
-        audio_transcription = AudioTranscription(audio_file, file_name)
-        print(audio_file)
-        print(audio_transcription.classify_call())
-        print(audio_transcription.qa_review())
+    # with open(audio_file_name, "rb") as audio_file:
+    #     audio_transcription = AudioTranscription(audio_file, file_name)
+    #     print(audio_file)
+    #     print(audio_transcription.classify_call())
+    #     print(audio_transcription.qa_review())
 
         # audio_transcription.generate_output()
 
     # print(f"Transcript: {transcript}")
     # print(f"Points: {points}")
+
+    print(API_KEY)
 
 if __name__ == "__main__":
     main()
