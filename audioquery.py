@@ -19,7 +19,7 @@ class AudioQuery:
         self.transcript = ""
         self.call_category = {}
         self.report = []
-        self.data = ""
+        self.data = {}
 
     def timer(func):
         def wrap_func(*args, **kwargs):
@@ -76,11 +76,22 @@ class AudioQuery:
 
 
     def extract_data(self):
-        self.classify_call()
-        data = extract_data(self.transcript)
-        self.data = data
+        if (len(self.transcript) == 0):
+            self.transcribe()
+        
+        # data = extract_data(self.transcript)
+        # self.data = data
 
-        return self.data
+        # return self.data
+
+        data = extract_data(self.transcript)
+        try:
+            data_dict = json.loads(extract_data(self.transcript))
+            self.data = data_dict
+            return self.data
+        except json.JSONDecodeError as e:
+            print(f"Error decoding JSON: {str(e)}")
+
 
     def qa_review(self):
         # self.transcribe()
@@ -128,23 +139,23 @@ class AudioQuery:
 # Rest of your code...
 
 def main():
-    # audio_file_name = "audio/movein_2.mp3"
+    audio_file_name = "audio/movein_2.mp3"
     
 
-    # file_name = os.path.splitext(os.path.basename(audio_file_name))[0]
+    file_name = os.path.splitext(os.path.basename(audio_file_name))[0]
 
-    # with open(audio_file_name, "rb") as audio_file:
-    #     audio_transcription = AudioTranscription(audio_file, file_name)
-    #     print(audio_file)
-    #     print(audio_transcription.classify_call())
-    #     print(audio_transcription.qa_review())
+    with open(audio_file_name, "rb") as audio_file:
+        audio_query = AudioQuery(audio_file, file_name)
+        print(audio_query.extract_data())
+        # print(audio_file)
+        # print(audio_query.classify_call())
+        # print(audio_query.qa_review())
 
-        # audio_transcription.generate_output()
+        # audio_query.generate_output()
 
     # print(f"Transcript: {transcript}")
     # print(f"Points: {points}")
 
-    print(API_KEY)
 
 if __name__ == "__main__":
     main()

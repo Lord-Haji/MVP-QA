@@ -33,10 +33,10 @@ def main():
                 display_table(classification)
 
         # Button to extract data
-        # if st.button("Extract Data"):
-        #     with st.spinner("Extracting data..."):
-        #         data = audio_query.extract_data()
-        #         st.text_area("Data: ", value=data, key="data", height = 500)
+        if st.button("Extract Data"):
+            with st.spinner("Extracting data..."):
+                data = audio_query.extract_data()
+                display_table(data, transpose=True)
 
         # # Button to review transcription
         # if st.button("Review Transcription"):
@@ -61,23 +61,53 @@ def calculate_height(text, max_line_length=60, pixels_per_line=12):
     lines = len(text) // max_line_length
     return lines * pixels_per_line
 
-def display_table(dictionary):
-    keys = list(dictionary.keys())
-    values = list(dictionary.values())
+# def display_table(dictionary, transpose=False):
+#     keys = list(dictionary.keys())
+#     values = [str(val) for val in dictionary.values()]
 
-    table = "| "
-    table += " | ".join(keys)
-    table += " |\n"
+#     if transpose:
+#         # Keys are row headers
+#         for k, v in zip(keys, values):
+#             table = "| " + k + " | " + v + " |\n"
+#             st.markdown(table)
+#     else:
+#         # Keys are column headers
+#         table = "| "
+#         table += " | ".join(keys)
+#         table += " |\n"
 
-    table += "| "
-    table += " | ".join(["---"] * len(keys))
-    table += " |\n"
+#         table += "| "
+#         table += " | ".join(["---"] * len(keys))
+#         table += " |\n"
 
-    table += "| "
-    table += " | ".join(values)
-    table += " |\n"
+#         table += "| "
+#         table += " | ".join(values)
+#         table += " |\n"
 
-    st.markdown(table)
+#         st.markdown(table)
+
+
+def display_table(dictionary, transpose=False):
+     # CSS to inject contained in a string
+    hide_table_row_index = """
+                <style>
+                thead tr th:first-child {display:none}
+                tbody th {display:none}
+                </style>
+                """
+
+    # Inject CSS with Markdown
+    st.markdown(hide_table_row_index, unsafe_allow_html=True)
+    if transpose:
+        df = pd.DataFrame(list(dictionary.items()), columns=['Particulars', 'Information'])
+        df.index += 1
+        st.table(df)
+    else:
+        df = pd.DataFrame([dictionary])
+        df.index += 1
+        st.table(df)
+
+
 
 if __name__ == "__main__":
     main()
