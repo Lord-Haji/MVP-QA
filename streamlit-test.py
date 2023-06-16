@@ -23,7 +23,7 @@ def main():
 
         # Display the transcription
         st.subheader("Transcription")
-        st.text_area("transcript", value=transcript_text, key="transcript_text", height=calculate_height(transcript_text))
+        st.text_area("", value=transcript_text, key="transcript_text", height=calculate_height(transcript_text))
 
         # Button to classify call
         if st.button("Classify Call"):
