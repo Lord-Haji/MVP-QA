@@ -23,7 +23,7 @@ def main():
 
         # Display the transcription
         st.subheader("Transcription")
-        st.text_area("", value=transcript_text, key="transcript_text", height=calculate_height(transcript_text))
+        st.text_area("transcription", value=transcript_text, key="transcript_text", height=calculate_height(transcript_text), label_visibility="hidden")
 
         # Button to classify call
         if st.button("Classify Call"):
@@ -60,32 +60,6 @@ def calculate_height(text, max_line_length=60, pixels_per_line=12):
 
     lines = len(text) // max_line_length
     return lines * pixels_per_line
-
-# def display_table(dictionary, transpose=False):
-#     keys = list(dictionary.keys())
-#     values = [str(val) for val in dictionary.values()]
-
-#     if transpose:
-#         # Keys are row headers
-#         for k, v in zip(keys, values):
-#             table = "| " + k + " | " + v + " |\n"
-#             st.markdown(table)
-#     else:
-#         # Keys are column headers
-#         table = "| "
-#         table += " | ".join(keys)
-#         table += " |\n"
-
-#         table += "| "
-#         table += " | ".join(["---"] * len(keys))
-#         table += " |\n"
-
-#         table += "| "
-#         table += " | ".join(values)
-#         table += " |\n"
-
-#         st.markdown(table)
-
 
 def display_table(dictionary, transpose=False):
      # CSS to inject contained in a string

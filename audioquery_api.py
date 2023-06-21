@@ -1,9 +1,20 @@
 from fastapi import FastAPI, UploadFile, File, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
 from audioquery import AudioQuery
 import pandas as pd
 import os
 
 app = FastAPI()
+
+origins = ["*"]  # React app's location]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 @app.post("/transcribe_audio")
 async def transcribe_audio(audio_file: UploadFile = File(...)):
